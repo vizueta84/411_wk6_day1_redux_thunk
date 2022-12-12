@@ -27,7 +27,7 @@ Today we are going to create a mock-import utility that we can use in our cars a
 * For the TableBody we are going to want to `map` through our list of "makes" (from Redux) to display all the rows. To do that we first need to hook up our `mapStateToProps` function so that our Import component can read the data. Go to `containers/Import.js` and go through the normal setup for this step. As a reminder, that involves importing "connect", importing the "Import" component and then creating a mapStateToProps function that maps the property "makes" to "state.makes".
 
 * Once that is done go to the `Router` file and switch the import so that it references "containers/Import" instead of "components/Import".
-
+Finish!!!!!
 * Now we can go back to the "Import" component and write our map function. Inside of the `<TableBody>` tags we need to write `{ props.makes.map()... }`. You should know that part by now. Return a `TableRow` with three `TableCell`s in it. Reference the data from the API to see what you should put where. For example, each make has a "MakeId" and a "MakeName" so you will be using those to correspond to the Id and Make columns. Leave the actions column alone for now.
 
 * We've got the setup in our component and we just need to tie the import button in so that it makes the fetch call when it's clicked. First we need to add `mapDispatchToProps` in our container. Let's navigate to the "Import" container and do that now. Map a property called "fetchMakes" to `() => dispatch(fetchMakes())` and remember to import the "fetchMakes" action at the top of the file.
